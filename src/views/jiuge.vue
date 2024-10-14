@@ -2,7 +2,7 @@
   <div class="aichat-main">
     <!-- <div class="header-r"></div> -->
     <div class="chat-class">
-      <el-button class="conf-btn" @click="openForm">设置</el-button>
+      <el-button class="conf-btn-1" @click="openForm">设置</el-button>
       <el-button class="conf-btn-2" @click="clearChat">清空</el-button>
       <el-button class="conf-btn-3" @click="downloadChat">下载</el-button>
       <!-- <div class="left-menu">
@@ -20,7 +20,7 @@
           <div class="dd-header" @click="showNumber">
             <div>九格大模型</div>
             <div v-if="isExpanded">
-              <el-button class="conf-btn" @click.stop="backConf">
+              <el-button class="conf-btn" @click.stop="backConf" text>
                 <svg class="icon3" aria-hidden="true">
                   <use xlink:href="#icon-zhongxinshengcheng"></use>
                 </svg>
@@ -2146,7 +2146,7 @@ watch([value1, value2, value3], ([newVal1, newVal2, newVal3]) => {
   width: 100%;
   transition: width 0.5s ease-in-out, height 0.5s ease-in-out, margin-left 0.5s ease-in-out, margin-top 0.5s ease-in-out;
   /* background: #ccdaff; */
-  background: #b1e0fb;
+  background: #f6f6f6;
   border: 3px solid #8ad1fa;
   border-radius: 15px;
 }
@@ -2172,6 +2172,12 @@ watch([value1, value2, value3], ([newVal1, newVal2, newVal3]) => {
 }
 
 .conf-btn {
+  position: absolute;
+  /* background: #b1e0fb; */
+  margin-left: 6px;
+  top: 2px;
+}
+.conf-btn-1 {
   position: absolute;
   background: #b1e0fb;
   top: 40px;
@@ -2855,7 +2861,7 @@ textarea:focus {
   }
 
   .all-content {
-    padding: 0 90px 0 30px;
+    padding: 0 90px 0 80px;
     font-size: 14px;
   }
 
