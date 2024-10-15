@@ -1059,8 +1059,9 @@ const fetchRequest = async function (inputs: any, dp: any) {
     // 50/90/60
     let data = JSON.stringify({
       session_id: myUuid.value,
-      inputs: inputs,
+      messages: inputs,
       dialog_pos: dp,
+      encoding: "text",
       "top-k": value1.value * 2,
       "top-p": value2.value / 100,
       temperature: value3.value / 50,
